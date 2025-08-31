@@ -118,3 +118,18 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+    select,
+    input,
+    #apiKey,
+    button {
+      margin: 5px 0;
+      padding: 6px;
+      width: 18rem;
+    }
+}
