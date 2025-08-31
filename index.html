@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌿 Herbal Garden</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>🌿 Herbal Plant Info 🌿</h2>
+
+    <!-- Dropdown to choose query type -->
+    <select id="queryType" onchange="updatePlaceholder()">
+      <option value="plant">Plant Name</option>
+      <option value="disease">Disease Name</option>
+    </select>
+
+    <!-- Search input -->
+    <input type="text" id="searchBox" placeholder="Enter plant name" />
+
+    <!-- Search button -->
+     <div class="btn-Api">
+      <input id="apiKey" type="text" placeholder="Enter your Gemini API key here">
+      <button onclick="searchGemini()">Search</button>
+     </div>
+    
+
+    <!-- Loader -->
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <!-- Output box -->
+    <div id="output" class="output-box"></div>
+
+    <!-- Image result -->
+    <div id="imageContainer" style="text-align:center; margin-top:20px;">
+      <img id="resultImage" src="" alt=""
+        style="max-width: 100%; max-height: 250px; border-radius: 8px; display: none;" />
+    </div>
+  </div>
+
+  <!-- Small inline script for placeholder -->
+  <script>
+    function updatePlaceholder() {
+      const type = document.getElementById('queryType').value;
+      document.getElementById('searchBox').placeholder =
+        type === 'plant' ? 'Enter plant name' : 'Enter disease name';
+    }
+  </script>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
