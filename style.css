@@ -119,10 +119,13 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
   body {
     font-size: 14px;
     padding: 8px;
+  }
+  .heading{
+    font-size: 1.3rem;
   }
     select,
     input,
@@ -130,6 +133,6 @@ button:hover {
     button {
       margin: 5px 0;
       padding: 6px;
-      width: 18rem;
+      width: 10rem;
     }
 }
